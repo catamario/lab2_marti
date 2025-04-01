@@ -1,0 +1,7 @@
+# ninja log v6
+2	240	7651990668720134	build.ninja	a44cab08b6bfd233
+30	589	7651990669538136	CMakeFiles/lab2_marti.dir/main.cpp.obj	dc3515741f025750
+35	610	7651990669587806	CMakeFiles/lab2_marti.dir/tranzactie/Tranzactie.cpp.obj	e21ac89776103931
+38	643	7651990669617743	CMakeFiles/lab2_marti.dir/atm/ATM.cpp.obj	7101ba964c02e26d
+32	645	7651990669557950	CMakeFiles/lab2_marti.dir/colectie/Colectie.cpp.obj	6a82124dafaa6d11
+645	769	7651990675691485	lab2_marti.exe	5bbaa8cf85f97f40
