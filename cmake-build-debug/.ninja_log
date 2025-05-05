@@ -5,3 +5,9 @@
 38	643	7651990669617743	CMakeFiles/lab2_marti.dir/atm/ATM.cpp.obj	7101ba964c02e26d
 32	645	7651990669557950	CMakeFiles/lab2_marti.dir/colectie/Colectie.cpp.obj	6a82124dafaa6d11
 645	769	7651990675691485	lab2_marti.exe	5bbaa8cf85f97f40
+11	107	7681718374671417	CMakeFiles/lab2_marti.dir/colectie/Colectie.cpp.obj	6a82124dafaa6d11
+16	572	7681718374721295	CMakeFiles/lab2_marti.dir/tranzactie/Tranzactie.cpp.obj	e21ac89776103931
+5	572	7681718374611593	CMakeFiles/lab2_marti.dir/main.cpp.obj	dc3515741f025750
+11	469	7681719483741730	CMakeFiles/lab2_marti.dir/main.cpp.obj	dc3515741f025750
+15	493	7681719483781384	CMakeFiles/lab2_marti.dir/atm/ATM.cpp.obj	7101ba964c02e26d
+493	725	7681719488555635	lab2_marti.exe	5bbaa8cf85f97f40

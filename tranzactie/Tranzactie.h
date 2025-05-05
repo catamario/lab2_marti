@@ -5,12 +5,16 @@
 using namespace std;
 
 class Tranzactie {
+private:
+    int id; // id-ul tranzactiei
+    int suma; // suma retrasa
+    int valori[10]; // valorile bancnotelor
+    int cantitati[10]; // numarul fiecarei bancnote
+    int numarTipuri; // cate tipuri de bancnote au fost folosite
+
 public:
-    int id, suma;
-    int bancnoteFolosite[10][2];
-    int numarTipuri;
-    Tranzactie(int id, int suma, int bancnoteFolosite[][2], int numarTipuri);
-    void afiseazaTranzactie();
+    Tranzactie(int id, int suma, int v[], int c[], int tipuri); // constructor
+    void afiseaza(); // afiseaza tranzactia
 };
 
 #endif

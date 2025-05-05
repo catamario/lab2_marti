@@ -1,32 +1,47 @@
 #include "atm/ATM.h"
-#include <iostream>
-using namespace std;
 
 int main() {
     ATM atm;
-    atm.adaugaBancnote(100, 50);
-    atm.adaugaBancnote(50, 45);
-    atm.adaugaBancnote(10, 100);
-
     int optiune;
+
     do {
-        cout << "\nMeniu ATM:\n";
-        cout << "1. Afisare bancnote disponibile\n";
-        cout << "2. Retragere bani\n";
-        cout << "3. Afisare istoric tranzactii\n";
+        cout << "\n===== MENIU ATM =====\n";
+        cout << "1. Adauga bancnote\n";
+        cout << "2. Retrage bani\n";
+        cout << "3. Afiseaza bancnote disponibile\n";
+        cout << "4. Afiseaza tranzactii\n";
         cout << "0. Iesire\n";
-        cout << "Optiune: ";
+        cout << "Alege optiunea: ";
         cin >> optiune;
 
-        if (optiune == 1) {
-            atm.afiseazaBancnoteDisponibile();
-        } else if (optiune == 2) {
-            int suma;
-            cout << "Introdu suma: ";
-            cin >> suma;
-            atm.retrageBani(suma);
-        } else if (optiune == 3) {
-            atm.afiseazaTranzactii();
+        switch (optiune) {
+            case 1: {
+                int val, nr;
+                cout << "Valoare bancnota: ";
+                cin >> val;
+                cout << "Numar bancnote: ";
+                cin >> nr;
+                atm.adaugaBancnote(val, nr);
+                break;
+            }
+            case 2: {
+                int suma;
+                cout << "Suma de retras: ";
+                cin >> suma;
+                atm.retrageBani(suma);
+                break;
+            }
+            case 3:
+                atm.afiseazaBancnoteDisponibile();
+            break;
+            case 4:
+                atm.afiseazaTranzactii();
+            break;
+            case 0:
+                cout << "Iesire...\n";
+            break;
+            default:
+                cout << "Optiune invalida.\n";
         }
     } while (optiune != 0);
 

@@ -1,17 +1,18 @@
 #include "Tranzactie.h"
-#include <iostream>
-using namespace std;
 
-Tranzactie::Tranzactie(int id, int suma, int bancnoteFolosite[][2], int numarTipuri) : id(id), suma(suma), numarTipuri(numarTipuri) {
-    for (int i = 0; i < numarTipuri; i++) {
-        this->bancnoteFolosite[i][0] = bancnoteFolosite[i][0];
-        this->bancnoteFolosite[i][1] = bancnoteFolosite[i][1];
+Tranzactie::Tranzactie(int id, int suma, int v[], int c[], int tipuri) {
+    this->id = id;
+    this->suma = suma;
+    this->numarTipuri = tipuri;
+    for (int i = 0; i < tipuri; i++) {
+        valori[i] = v[i];
+        cantitati[i] = c[i];
     }
 }
 
-void Tranzactie::afiseazaTranzactie() {
-    cout << "Tranzactie " << id << ": " << suma << " RON folosind:\n";
+void Tranzactie::afiseaza() {
+    cout << "Tranzactie #" << id << ": Suma " << suma << " RON\n";
     for (int i = 0; i < numarTipuri; i++) {
-        cout << bancnoteFolosite[i][1] << " x " << bancnoteFolosite[i][0] << " RON\n";
+        cout << "  " << cantitati[i] << " x " << valori[i] << " RON\n";
     }
 }

@@ -1,19 +1,29 @@
 #ifndef COLECTIE_H
 #define COLECTIE_H
 
-#include <iostream>
-using namespace std;
+const int MAX_ELEMS = 100;
+
+typedef int TElem;
 
 class Colectie {
 private:
-    int valori[10];
-    int cantitati[10];
-    int size;
+    TElem elems[MAX_ELEMS]; // fiecare bancnota este un element
+    int size; // numarul total de bancnote
+
 public:
-    Colectie();
-    void adaugaBancnota(int valoare, int numar);
-    bool retrageSuma(int suma, int bancnoteRetrase[][2], int &numarTipuri);
-    void afiseazaBancnote();
+    Colectie(); // constructor
+
+    void add(TElem elem); // adauga o bancnota (o aparitie)
+
+    bool remove(TElem elem); // sterge o aparitie daca exista
+
+    bool search(TElem elem); // verifica daca o valoare exista in colectie
+
+    int getSize(); // returneaza numarul total de bancnote
+
+    int nrOccurrences(TElem elem); // returneaza cate bancnote de o anumita valoare exista
+
+    int getAt(int position); // returneaza elementul de pe o pozitie (pentru parcurgere/afisare)
 };
 
 #endif
